@@ -2,7 +2,7 @@
 
 # Load model from ModelScope to speed up download
 export ASCEND_RT_VISIBLE_DEVICES=14,15
-export MODEL_PATH=/home1/model/Qwen3.8-27B
+export MODEL_PATH=/home1/model/Qwen3.8-27B-w8a8/
 export VLLM_USE_MODELSCOPE=True
 export HCCL_BUFFSIZE=512
 export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
