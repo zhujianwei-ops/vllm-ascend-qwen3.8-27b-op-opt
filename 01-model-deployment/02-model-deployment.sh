@@ -6,6 +6,11 @@ export MODEL_PATH=/home1/model/Qwen3.8-27B-w8a8/
 export VLLM_USE_MODELSCOPE=True
 export HCCL_BUFFSIZE=512
 export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PROFILE_DIR="${SCRIPT_DIR}/../04-operator-profiling-data-analysis/vllm_profile"
+mkdir -p "$PROFILE_DIR"
+
 # Size of the shared buffer (in MB) used by HCCL for NPU-to-NPU collective communication
 # To reduce memory fragmentation and avoid out of memory
 
@@ -25,6 +30,7 @@ vllm serve "$MODEL_PATH" \
     --trust-remote-code \
     --enable-prefix-caching \
     --gpu-memory-utilization 0.85 \
+    --profiler-config '{"profiler": "torch", "torch_profiler_dir": "'"$PROFILE_DIR"'", "torch_profiler_with_stack": false}' \
     --speculative-config '{"method": "qwen3_5_mtp", "num_speculative_tokens": 3, "enforce_eager": true}' \
     --compilation-config '{"cudagraph_mode":"FULL_DECODE_ONLY"}' \
     --additional-config '{"enable_cpu_binding":true}'
