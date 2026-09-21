@@ -4,6 +4,7 @@ set -Eeuo pipefail
 
 SERVER_URL="http://localhost:8000"
 MODEL_NAME="qwen3.8"
+PROFILE_CASE="${PROFILE_CASE:-baseline_single_request}"
 
 echo "Starting profiling..."
 curl --fail --silent --show-error --request POST "${SERVER_URL}/start_profile"
@@ -26,4 +27,4 @@ echo "Stopping profiling..."
 curl --fail --silent --show-error --request POST "${SERVER_URL}/stop_profile"
 printf '\n'
 
-echo "Profiling complete. Data is saved under 04-operator-profiling-data-analysis/vllm_profile."
+echo "Profiling complete. Data is saved under 04-operator-profiling-data-analysis/vllm_profile/${PROFILE_CASE}."

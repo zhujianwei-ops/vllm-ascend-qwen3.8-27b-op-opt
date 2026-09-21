@@ -8,7 +8,8 @@ export HCCL_BUFFSIZE=512
 export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-PROFILE_DIR="${SCRIPT_DIR}/../04-operator-profiling-data-analysis/vllm_profile"
+PROFILE_CASE="${PROFILE_CASE:-baseline_single_request}"
+PROFILE_DIR="${SCRIPT_DIR}/../04-operator-profiling-data-analysis/vllm_profile/${PROFILE_CASE}"
 mkdir -p "$PROFILE_DIR"
 
 # Size of the shared buffer (in MB) used by HCCL for NPU-to-NPU collective communication

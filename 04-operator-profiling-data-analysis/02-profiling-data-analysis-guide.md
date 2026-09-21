@@ -11,7 +11,7 @@
 当前示例目录为：
 
 ```text
-04-operator-profiling-data-analysis/vllm_profile/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/
 ```
 
 `<run>_ascend_pt` 是一次 profiling 采集结果。多卡场景通常会生成多个 rank 目录，例如 `rank0_*_ascend_pt`、`rank1_*_ascend_pt`，分析时应先分别查看各 rank，再进行横向对比。

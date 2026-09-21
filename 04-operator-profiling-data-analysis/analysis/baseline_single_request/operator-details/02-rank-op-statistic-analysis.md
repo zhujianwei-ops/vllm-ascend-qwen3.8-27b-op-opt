@@ -5,8 +5,8 @@
 本次分析使用以下两个 Rank 的 `op_statistic.csv`：
 
 ```text
-04-operator-profiling-data-analysis/vllm_profile/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/op_statistic.csv
-04-operator-profiling-data-analysis/vllm_profile/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/op_statistic.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/op_statistic.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/op_statistic.csv
 ```
 
 每个文件包含 68 个算子统计项。`Ratio(%)` 表示该算子的耗时占当前统计范围总耗时的比例，每个 Rank 的比例之和约为 100%。

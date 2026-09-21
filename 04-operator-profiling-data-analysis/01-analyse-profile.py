@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
 from pathlib import Path
 
 from torch_npu.profiler.profiler import analyse
@@ -14,7 +15,11 @@ def main() -> None:
         "profile_dir",
         nargs="?",
         type=Path,
-        default=Path(__file__).resolve().parent / "vllm_profile",
+        default=(
+            Path(__file__).resolve().parent
+            / "vllm_profile"
+            / os.environ.get("PROFILE_CASE", "baseline_single_request")
+        ),
         help="Directory containing generated *_ascend_pt folders.",
     )
     args = parser.parse_args()

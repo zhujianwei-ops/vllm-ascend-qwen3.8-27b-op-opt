@@ -5,8 +5,8 @@
 本次分析使用以下两个 Rank 的 `operator_details.csv`：
 
 ```text
-04-operator-profiling-data-analysis/vllm_profile/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv
-04-operator-profiling-data-analysis/vllm_profile/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv
 ```
 
 文件包含约 3.76 万条记录、190 个不同的算子名称。由于同一个算子可能嵌套调用其他算子，`Host Total Duration` 和 `Device Total Duration` 存在父子层级关系，不能把所有行直接相加后当作真实总耗时。

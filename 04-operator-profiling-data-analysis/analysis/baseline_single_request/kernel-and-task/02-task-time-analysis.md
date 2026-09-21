@@ -3,8 +3,8 @@
 ## 1. 分析对象
 
 ```text
-04-operator-profiling-data-analysis/vllm_profile/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv
-04-operator-profiling-data-analysis/vllm_profile/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv
 ```
 
 `task_time.csv` 提供设备 Task 类型、开始时间、结束时间、执行时长、Stream 和 Task ID，适合判断任务调度、事件等待、通知等待、内存拷贝和设备任务之间的依赖关系。

@@ -3,8 +3,8 @@
 ## 分析对象
 
 ```text
-04-operator-profiling-data-analysis/vllm_profile/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/communication_matrix.json
-04-operator-profiling-data-analysis/vllm_profile/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/communication_matrix.json
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/communication_matrix.json
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/communication_matrix.json
 ```
 
 `communication_matrix.json` 按通信方向和链路记录本地传输、跨卡传输、数据量、传输耗时、带宽及对应的 HCCL 操作名。

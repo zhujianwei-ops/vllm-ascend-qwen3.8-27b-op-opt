@@ -3,8 +3,8 @@
 ## 1. 分析对象
 
 ```text
-04-operator-profiling-data-analysis/vllm_profile/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv
-04-operator-profiling-data-analysis/vllm_profile/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv
 ```
 
 `kernel_details.csv` 提供 Kernel 名称、类型、Accelerator Core、执行时长、等待时长、输入输出形状和硬件执行信息，适合从算子继续下钻到具体底层 Kernel。

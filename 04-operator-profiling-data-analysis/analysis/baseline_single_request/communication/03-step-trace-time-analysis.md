@@ -3,8 +3,8 @@
 ## 分析对象
 
 ```text
-04-operator-profiling-data-analysis/vllm_profile/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv
-04-operator-profiling-data-analysis/vllm_profile/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv
 ```
 
 两份 CSV 各只有一条聚合记录，`Step` 字段为空。因此本文件反映一次采集窗口的阶段统计，不能判断多个 Step 之间的稳定性。

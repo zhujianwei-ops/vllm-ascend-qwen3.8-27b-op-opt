@@ -5,8 +5,8 @@
 本次分析使用以下两个 Rank 的 `step_trace_time.csv`：
 
 ```text
-04-operator-profiling-data-analysis/vllm_profile/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv
-04-operator-profiling-data-analysis/vllm_profile/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank0_17391_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv
+04-operator-profiling-data-analysis/vllm_profile/baseline_single_request/rank1_17410_20260920075211024_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv
 ```
 
 两份 CSV 都只有一条聚合记录，且 `Step` 字段为空。因此，本次结果反映的是一次 profiling 采集窗口的整体阶段耗时，不能用于判断多个 step 之间的稳定性。
