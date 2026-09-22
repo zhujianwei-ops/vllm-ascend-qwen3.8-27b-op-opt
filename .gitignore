@@ -1,0 +1,6 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Profiling raw output (very large, ~GB)
+04-operator-profiling-data-analysis/vllm_profile/

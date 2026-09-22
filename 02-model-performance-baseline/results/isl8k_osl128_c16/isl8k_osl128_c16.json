@@ -1,0 +1,47 @@
+============ Serving Benchmark Result ============
+Successful requests:                     160
+Failed requests:                         0
+Maximum request concurrency:             16
+Benchmark duration (s):                  198.24
+Total input tokens:                      1310720
+Total generated tokens:                  20480
+Request throughput (req/s):              0.81
+Output token throughput (tok/s):         103.31
+Peak output token throughput (tok/s):    272.00
+Peak concurrent requests:                20.00
+Total token throughput (tok/s):          6715.24
+---------------Time to First Token----------------
+Mean TTFT (ms):                          2957.28
+Median TTFT (ms):                        2260.57
+P50 TTFT (ms):                           2260.57
+P90 TTFT (ms):                           4355.03
+P99 TTFT (ms):                           15729.60
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          130.94
+Median TPOT (ms):                        122.48
+P50 TPOT (ms):                           122.48
+P90 TPOT (ms):                           203.19
+P99 TPOT (ms):                           286.59
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           286.31
+Median ITL (ms):                         56.31
+P50 ITL (ms):                            56.31
+P90 ITL (ms):                            779.91
+P99 ITL (ms):                            1473.67
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          19586.63
+Median E2EL (ms):                        18139.69
+P50 E2EL (ms):                           18139.69
+P90 E2EL (ms):                           28927.53
+P99 E2EL (ms):                           41365.06
+---------------Speculative Decoding---------------
+Acceptance rate (%):                     40.28
+Acceptance length:                       2.21
+Drafts:                                  9293
+Draft tokens:                            27879
+Accepted tokens:                         11231
+Per-position acceptance (%):
+  Position 0:                            52.47
+  Position 1:                            38.25
+  Position 2:                            30.13
+==================================================
